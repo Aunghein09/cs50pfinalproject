@@ -4,7 +4,7 @@ Author: "Kyar-Hsing Ma"
 Date: 2022/08/27
 ---
 
-# CS50P Final Project
+# **CS50P Final Project**
 ## Project Description
 This final project is a demo program that simulates how items are registered, stored and updated in a shop in association with barcodes.
 
@@ -22,8 +22,160 @@ With no input, the check mode return the entire inventory table. But with item b
 
 Restock and Sale mode will update the inventory accordingly if items are available.
 
-##project.**main**
+## project.**main**
 
 <p class="func-header">
     <i>def</i> project.<b>main</b>(<i></i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L24">[source]</a>
 </p>
+
+
+## project.**checksum**
+
+<p class="func-header">
+    <i>def</i> project.<b>checksum</b>(<i>s</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L87">[source]</a>
+</p>
+
+Calculate checksum from 12 digits of EAN
+
+Args:
+
+    s (str): first 12 digits of EAN13
+
+Returns:
+
+    (int) :the last checksum number of EAN-13
+    
+    
+## project.**make_barcode**
+
+<p class="func-header">
+    <i>def</i> project.<b>make_barcode</b>(<i>item, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L104">[source]</a>
+</p>
+
+Produce barcode and save it in a file called barcode as jpg files and give back the EAN 13 number
+
+Args:
+
+    item (str): item name
+    df (pd.dataframe) : dataframe of csv file
+
+Returns:
+
+    ean13 (str): The 13 digit EAN13 number
+
+## project.**get_barcode**
+
+<p class="func-header">
+    <i>def</i> project.<b>get_barcode</b>(<i>item, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L130">[source]</a>
+</p>
+
+Get the item_code or bar_code from 'inventory.csv' where data are stored
+
+Args:
+
+    item (str):
+        Image file name(.jpg)
+        EAN13 code(13-digit code)
+        Item name
+        (re will check for the input and handle differently)
+    df (pd.dataframe) : dataframe of csv file
+Returns:
+
+    (int) 13-digit EAN integer
+    
+## project.**add_item**
+
+<p class="func-header">
+    <i>def</i> project.<b>add_item</b>(<i>df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L160">[source]</a>
+</p>
+
+Add item/ items to the inventory.csv has built-in iteration
+
+Args:
+
+    df (pd.dataframe) : dataframe of csv file
+
+Returns:
+
+    None
+    
+## project.**get_quantity**
+
+<p class="func-header">
+    <i>def</i> project.<b>get_quantity</b>(<i>bcode, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L197">[source]</a>
+</p>
+
+Get the quantity of the specific item
+
+Args:
+
+    bcode (int): EAN13 from get_barcode function
+    df (pd.dataframe) : dataframe of csv file
+
+Returns:
+
+    (int): quantity of item from dataframe
+
+
+
+
+## project.**get_price**
+
+<p class="func-header">
+    <i>def</i> project.<b>get_price</b>(<i>bcode, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L212">[source]</a>
+</p>
+
+Get the quantity of the specific item
+
+Args:
+
+    bcode (int): EAN13 from get_barcode function
+    df (pd.dataframe) : dataframe of csv file
+
+Returns:
+
+    (float): price of item from dataframe
+
+## project.**sell_item**
+
+<p class="func-header">
+    <i>def</i> project.<b>sell_item</b>(<i>item, amount, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L229">[source]</a>
+</p>
+
+check the availability of item, update the quantity in the table, return the cost of the item
+
+Args:
+
+    item (str):
+        Image file name
+        EAN13 code
+        Item name
+        (re will check for the input and handle differently)
+    amount(int): amount to sell
+    df (pd.dataframe) : dataframe of csv file
+
+Returns:
+
+    (float): cost of the item: price * quantity
+
+## project.**restock**
+
+<p class="func-header">
+    <i>def</i> project.<b>restock</b>(<i>item, amount, df</i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L259">[source]</a>
+</p>
+
+check the availability of item, update the quantity in the table
+
+Args:
+
+    item (str):
+        Image file name
+        EAN13 code
+        Item name
+        (re will check for the input and handle differently)
+        amount(int): amount to restock
+        df (pd.dataframe) : dataframe of csv file
+        
+Returns:
+
+    None
