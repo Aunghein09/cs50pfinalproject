@@ -1,14 +1,12 @@
-
-**Title: "CS50P Final Project"**
+# CS50P Final Project (Inventory)
+#### Video Demo:  <URL https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2Fx4FRpwIUt80&h=AT1bofBzco3-uA7pUDswxzm0yyAA3iHmMYnSXpbavOqfaX_vP7EV30mE-2glu9F47AxTu1Y_5iwJMMh3caKJNkYBunaa4C-f3176kcCs_0sZ1nHSpvNHkmNjQzh3PnlbsjZ2&s=1>
 
 **Author: "Kyar-Hsing Ma"**
 
 **Date: 2022/08/27**
 
-Video Demo for the project: <a class="src-href" target="[_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L87](https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2FKS1ZRbCvUlw&h=AT16CSlxVJFreEbOvpKyfyuGddRqU2u6P5uv3bwZx_NejCFiw_9M-ZRGQWlBbSkRwjHnCUDnORBu8ikE6cNnap_yMj2rJZc9wgIkXpbQj6mUUh1M3HnnDB35b-XqoRC8sZ-JoZNjE3MGP1k&s=1)">[YouTube]</a>
-
-# **CS50P Final Project**
-## Project Description
+## **CS50P Final Project (Inventory)**
+#### Project Description
 This final project is a demo program that simulates how items are registered, stored and updated in a shop in association with barcodes.
 
 The item data are store in a csv file name "inventory.csv".
@@ -44,7 +42,7 @@ Output:
 Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
 Please run the prgramm mentioning a mode python project.py -[mode]
  mode -a for add item    -r for restock item     -s for sell item        -c for check item
- 
+
 ```
 Without flag the prgram will not run and prompt the user to include a flag
 ### Check Mode
@@ -54,7 +52,7 @@ python project.py -c
 ```
 Output:
 ```
-Which item do you want to check: 
+Which item do you want to check:
 +----+--------+---------------+------------+---------+
 |    | Name   |     Item_code |   Quantity |   Price |
 |----+--------+---------------+------------+---------|
@@ -90,7 +88,7 @@ Output:
 
 ```
 Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
-Which item do you want to check: 
+Which item do you want to check:
 +----+--------+---------------+------------+---------+
 |    | Name   |     Item_code |   Quantity |   Price |
 |----+--------+---------------+------------+---------|
@@ -123,7 +121,7 @@ Output:
 
 ```
 Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
-Which item do you want to check: 
+Which item do you want to check:
 +----+--------+---------------+------------+---------+
 |    | Name   |     Item_code |   Quantity |   Price |
 |----+--------+---------------+------------+---------|
@@ -161,7 +159,7 @@ Output:
 
 ```
 Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
-Which item do you want to check: 
+Which item do you want to check:
 +----+--------+---------------+------------+---------+
 |    | Name   |     Item_code |   Quantity |   Price |
 |----+--------+---------------+------------+---------|
@@ -187,8 +185,8 @@ Args:
 Returns:
 
     (int) :the last checksum number of EAN-13
-    
-    
+
+
 ## project.**make_barcode**
 
 <p class="func-header">
@@ -225,7 +223,7 @@ Args:
 Returns:
 
     (int) 13-digit EAN integer
-    
+
 ## project.**add_item**
 
 <p class="func-header">
@@ -241,7 +239,7 @@ Args:
 Returns:
 
     None
-    
+
 ## project.**get_quantity**
 
 <p class="func-header">
@@ -318,7 +316,7 @@ Args:
         (re will check for the input and handle differently)
         amount(int): amount to restock
         df (pd.dataframe) : dataframe of csv file
-        
+
 Returns:
 
     None
