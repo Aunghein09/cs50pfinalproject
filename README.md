@@ -1,8 +1,11 @@
----
-Title: "CS50P Final Project"
-Author: "Kyar-Hsing Ma"
-Date: 2022/08/27
----
+
+**Title: "CS50P Final Project"**
+
+**Author: "Kyar-Hsing Ma"**
+
+**Date: 2022/08/27**
+
+Video Demo for the project: <a class="src-href" target="[_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L87](https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2FKS1ZRbCvUlw&h=AT16CSlxVJFreEbOvpKyfyuGddRqU2u6P5uv3bwZx_NejCFiw_9M-ZRGQWlBbSkRwjHnCUDnORBu8ikE6cNnap_yMj2rJZc9wgIkXpbQj6mUUh1M3HnnDB35b-XqoRC8sZ-JoZNjE3MGP1k&s=1)">[YouTube]</a>
 
 # **CS50P Final Project**
 ## Project Description
@@ -28,7 +31,147 @@ Restock and Sale mode will update the inventory accordingly if items are availab
     <i>def</i> project.<b>main</b>(<i></i>) <a class="src-href" target="_blank" href="https://github.com/Aunghein09/cs50pfinalproject/blob/main/project.py#L24">[source]</a>
 </p>
 
+## Example codes
+Cmd Input
+```
 
+python projec.py
+
+```
+Output:
+```
+
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Please run the prgramm mentioning a mode python project.py -[mode]
+ mode -a for add item    -r for restock item     -s for sell item        -c for check item
+ 
+```
+Without flag the prgram will not run and prompt the user to include a flag
+### Check Mode
+```
+python project.py -c
+
+```
+Output:
+```
+Which item do you want to check: 
++----+--------+---------------+------------+---------+
+|    | Name   |     Item_code |   Quantity |   Price |
+|----+--------+---------------+------------+---------|
+|  0 | sample | 5005154439282 |         10 |     100 |
++----+--------+---------------+------------+---------+
+```
+Without specific item mentioned, the prgram will return all the items in the inventory.
+
+### Add Mode
+```
+python project.py -a
+```
+
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Name: apple
+Quantity: 50
+Price: 2
+Add More Item? Please answer y or n: y
+Name: orange
+Quantity: 20
+Price: 1.5
+Add More Item? Please answer y or n: n
+Successfully added.
+```
+
+```
+python project.py -c
+```
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Which item do you want to check: 
++----+--------+---------------+------------+---------+
+|    | Name   |     Item_code |   Quantity |   Price |
+|----+--------+---------------+------------+---------|
+|  0 | sample | 5005154439282 |         10 |   100   |
+|  1 | apple  | 8780654645339 |         50 |     2   |
+|  2 | orange | 1768047085266 |         20 |     1.5 |
++----+--------+---------------+------------+---------+
+```
+
+### Restock Mode
+
+'''
+python project.py -r
+'''
+
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Item to restock: apple
+Amount: 100
+Successfully restocked
+Restock More Item? Please answer y or n: n
+```
+
+```
+python project.py -c
+```
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Which item do you want to check: 
++----+--------+---------------+------------+---------+
+|    | Name   |     Item_code |   Quantity |   Price |
+|----+--------+---------------+------------+---------|
+|  0 | sample | 5005154439282 |         10 |   100   |
+|  1 | apple  | 8780654645339 |        150 |     2   |
+|  2 | orange | 1768047085266 |         20 |     1.5 |
++----+--------+---------------+------------+---------+
+```
+Apple is updated.
+
+### Sell Mode
+
+```
+python project.py -s
+```
+
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Item to sell: apple
+Amount: 20
+Sell More Item? Please answer y or n: y
+Item to sell: orange.jpg
+Amount: 10
+Sell More Item? Please answer y or n: n
+Your Total: $55.00
+```
+Return the total cost and update the values
+
+```
+python project.py -c
+```
+Output:
+
+```
+Welcome to the Inventory        (CS50P Porject by Kyar-Hsing Ma)
+Which item do you want to check: 
++----+--------+---------------+------------+---------+
+|    | Name   |     Item_code |   Quantity |   Price |
+|----+--------+---------------+------------+---------|
+|  0 | sample | 5005154439282 |         10 |   100   |
+|  1 | apple  | 8780654645339 |        130 |     2   |
+|  2 | orange | 1768047085266 |         10 |     1.5 |
++----+--------+---------------+------------+---------+
+```
+
+The following are some description of the functions in this program.
 ## project.**checksum**
 
 <p class="func-header">
