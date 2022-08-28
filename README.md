@@ -1,5 +1,5 @@
 # CS50P Final Project (Inventory)
-#### Video Demo:  <URL https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2Fx4FRpwIUt80&h=AT1bofBzco3-uA7pUDswxzm0yyAA3iHmMYnSXpbavOqfaX_vP7EV30mE-2glu9F47AxTu1Y_5iwJMMh3caKJNkYBunaa4C-f3176kcCs_0sZ1nHSpvNHkmNjQzh3PnlbsjZ2&s=1>
+#### Video Demo:  <URL https://www.youtube.com/watch?v=LkVXC9RDL30>
 
 **Author: "Kyar-Hsing Ma"**
 
